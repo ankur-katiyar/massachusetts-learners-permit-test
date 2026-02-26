@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massachusetts Learner's Permit Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Massachusetts Registry of Motor Vehicles</h1>
+            <h2>Learner's Permit Written Test</h2>
+        </header>
+
+        <div id="instructions" class="instructions">
+            <h3>Test Instructions</h3>
+            <p>This test consists of 25 multiple-choice questions. You must answer at least 18 questions correctly to pass.</p>
+            <p>Topics include: Rules of the Road, Road Signs, Alcohol Misuse, Suspensions, and Junior Operator License violations.</p>
+            <p>You have 25 minutes to complete the test.</p>
+            <button id="start-test">Start Test</button>
+        </div>
+
+        <div id="test-section" class="test-section hidden">
+            <div class="progress">
+                <span id="question-number">Question 1 of 25</span>
+                <span id="timer">25:00</span>
+            </div>
+
+            <div id="question-container">
+                <div class="question">
+                    <p id="question-text">Loading question...</p>
+                    <div class="options" id="options">
+                        <!-- Options will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="feedback" class="feedback hidden">
+                <h4 id="feedback-title">Feedback</h4>
+                <p id="feedback-message"></p>
+                <div class="excerpt">
+                    <h5>From the Massachusetts Driver's Manual:</h5>
+                    <p id="manual-excerpt"></p>
+                </div>
+                <button id="continue-btn">Continue to Next Question</button>
+            </div>
+
+            <div class="navigation">
+                <button id="prev-btn" disabled>Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+        </div>
+
+        <div id="results" class="results hidden">
+            <h3>Test Results</h3>
+            <div id="result-message"></div>
+            <div id="score-details"></div>
+            <button id="retake-test">Take Test Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
